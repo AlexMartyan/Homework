@@ -1,0 +1,29 @@
+// Напишите программу, которая выводит третью цифру заданного числа
+// или сообщает, что третьей цифры нет.
+// 645 -> 5
+// 78 -> третьей цифры нет
+// 32679 -> 6
+
+int Prompt(string message)
+{
+    System.Console.Write(message);
+    string value = Console.ReadLine();
+    return Convert.ToInt32(value);
+}
+
+int N = Prompt("Введите число : ");
+int div = 10;
+int rank = 1;
+
+if ((N < -99) || (N > 99))
+{
+    while ((N / div < -99) || (N / div > 99))
+    {
+        div = div * 10;
+        rank = rank * 10;
+    }
+    int result = (N % div) / rank;
+    System.Console.WriteLine($"Третья цифра введённого числа = {Math.Abs(result)}");
+}
+else
+    System.Console.WriteLine("Третьей цифры в введённом числе нет!");
