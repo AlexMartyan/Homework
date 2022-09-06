@@ -1,0 +1,27 @@
+// Напишите программу, которая принимает на вход координаты двух точек
+// и находит расстояние между ними в 3D пространстве.
+// A (3,6,8); B (2,1,-7), -> 15.84
+// A (7,-5, 0); B (1,-1,9) -> 11.53
+
+int Prompt(string message)
+{
+    System.Console.Write(message);
+    string value = Console.ReadLine();
+    return Convert.ToInt32(value);
+}
+
+int Sqr(int N)
+{
+    return N * N;
+}
+
+int[] Coord1 = new int[3];
+int[] Coord2 = new int[3];
+Coord1[0] = Prompt("Введите координатy Х первой точки: ");
+Coord1[1] = Prompt("Введите координатy Y первой точки: ");
+Coord1[2] = Prompt("Введите координатy Z первой точки: ");
+Coord2[0] = Prompt("Введите координатy Х второй точки: ");
+Coord2[1] = Prompt("Введите координатy Y второй точки: ");
+Coord2[2] = Prompt("Введите координатy Z второй точки: ");
+double Lenghth = Math.Sqrt(Sqr(Coord2[0] - Coord1[0]) + Sqr(Coord2[1] - Coord1[1]) + Sqr(Coord2[2] - Coord1[2]));
+System.Console.WriteLine($"Расстояние между данными точками = {Lenghth}");
