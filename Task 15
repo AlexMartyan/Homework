@@ -1,0 +1,30 @@
+System.Console.Write("Введите порядковый номер дня недели (цифру от 1 до 7) : ");
+int N = Convert.ToInt32(Console.ReadLine());
+
+switch (N)
+{
+    case 1:
+        System.Console.WriteLine("Нет, это понедельник.");
+        break;
+    case 2:
+        System.Console.WriteLine("Нет, это вторник.");
+        break;
+    case 3:
+        System.Console.WriteLine("Нет, это среда.");
+        break;
+    case 4:
+        System.Console.WriteLine("Нет, это четверг.");
+        break;
+    case 5:
+        System.Console.WriteLine("Нет, это пятница.");
+        break;
+    case 6:
+        System.Console.WriteLine("Да, это суббота.");
+        break;
+    case 7:
+        System.Console.WriteLine("Да, это воскресенье.");
+        break;
+    default:
+        System.Console.WriteLine("Bведена неправильная цифра!");
+        break;
+}
