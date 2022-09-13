@@ -4,6 +4,8 @@
 int x;
 int summ = 0;
 x = Prompt("Введите число : ");
+if (x < 0)
+    x = x * (-1);
 while (x >= 10)
 {
     summ = summ + x % 10;
