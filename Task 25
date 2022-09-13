@@ -1,0 +1,14 @@
+int x;
+int y;
+double z;
+x = Prompt("Введите число : ");
+y = Prompt("Введите степень : ");
+z = Math.Pow(x, y);
+System.Console.WriteLine($"Число {x} в степени {y} = {z}.");
+
+int Prompt(string message)
+{
+    System.Console.Write(message);
+    string value = Console.ReadLine();
+    return Convert.ToInt32(value);
+}
