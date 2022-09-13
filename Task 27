@@ -1,0 +1,20 @@
+// Напишите программу, которая принимает на вход число
+// и выдаёт сумму цифр в числе.
+
+int x;
+int summ = 0;
+x = Prompt("Введите число : ");
+while (x >= 10)
+{
+    summ = summ + x % 10;
+    x = (x - x % 10) / 10;
+}
+summ = summ + x;
+System.Console.WriteLine($"Сумма цифр данного числа = {summ}");
+
+int Prompt(string message)
+{
+    System.Console.Write(message);
+    string value = Console.ReadLine();
+    return Convert.ToInt32(value);
+}
